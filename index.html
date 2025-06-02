@@ -1,16 +1,84 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
+<html lang="ua">
+<head>
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Кошик покупок</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+    <div class="container">
+        <div class="column first-column">
+            <div class="badge-area">
+                <span class="badge">Buy List</span>
+                <span class="badge-author-line1">Created by:</span>
+                <span class="badge-author-line2">Анна Ченторог</span>
+            </div>
+        </div>
+
+        <div class="column main-content-column">
+            <div class="product-list-area">
+                <div class="add-product-section">
+                    <input type="text" id="new-product-name" placeholder="Назва товару">
+                    <button id="add-product-btn" data-tooltip="Додати товар до списку">Додати</button>
+                </div>
+                
+                <div class="product-entry">
+                    <span class="product-name">Помідори</span>
+                    <input type="number" class="quantity-input" value="3" min="0"> 
+                    <button class="status-button not-bought" data-tooltip="Відмітити як куплено">Не куплено</button>
+                    <button class="delete-button" data-tooltip="Видалити товар">&times;</button>
+                </div>
+                
+                <div class="product-entry bought-item">
+                    <span class="product-name">Печиво</span>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus" data-tooltip="Зменшити кількість">-</button>
+                        <input type="text" class="quantity-input readonly" value="2" readonly>
+                        <button class="quantity-btn plus" data-tooltip="Збільшити кількість">+</button>
+                    </div>
+                    <button class="status-button bought" data-tooltip="Позначено як куплено">Куплено</button>
+                    <button class="delete-button" data-tooltip="Видалити товар">&times;</button>
+                </div>
+
+                <div class="product-entry bought-item">
+                    <span class="product-name">Сир</span> 
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus" data-tooltip="Зменшити кількість">-</button>
+                        <input type="text" class="quantity-input readonly" value="1" readonly>
+                        <button class="quantity-btn plus" data-tooltip="Збільшити кількість">+</button>
+                    </div>
+                    <button class="status-button bought" data-tooltip="Позначено як куплено">Куплено</button>
+                    <button class="delete-button" data-tooltip="Видалити товар">&times;</button>
+                </div>
+
+                <div class="product-entry">
+                    <span class="product-name">Молоко</span>
+                    <input type="number" class="quantity-input" value="3" min="0">
+                    <button class="status-button not-bought" data-tooltip="Відмітити як куплено">Не куплено</button>
+                    <button class="delete-button" data-tooltip="Видалити товар">&times;</button>
+                </div>
+            </div>
+
+            <div class="status-summary-section">
+                <div class="status-section">
+                    <h2>Залишилося</h2>
+                    <div class="status-items">
+                        <span class="status-badge">Помідори <span class="status-amount">3</span></span>
+                        <span class="status-badge">Молоко <span class="status-amount">3</span></span>
+                    </div>
+                </div>
+
+                <div class="status-section">
+                    <h2>Куплено</h2>
+                    <div class="status-items">
+                        <span class="status-badge bought-badge">Печиво <span class="status-amount">2</span></span>
+                        <span class="status-badge bought-badge">Сир <span class="status-amount">1</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="tooltip-button buy-button" data-tooltip="Купити зараз">Купити</button>
+    </div>
 </body>
 </html>
