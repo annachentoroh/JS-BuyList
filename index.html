@@ -1,16 +1,42 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
+<html lang="ua">
+<head>
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик покупок</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+    <div class="container">
+        <div class="column first-column">
+            <div class="badge-area">
+                <span class="badge">Buy List</span>
+                <span class="badge-author-line1">Created by:</span>
+                <span class="badge-author-line2">Анна Ченторог</span>
+            </div>
+        </div>
+
+        <div class="column main-content-column">
+            <div class="add-product-section">
+                <input type="text" id="new-product-name" placeholder="Назва товару">
+                <button id="add-product-btn" data-tooltip="Додати новий товар до списку">Додати</button>
+            </div>
+
+            <div class="product-list-area" id="product-list"></div>
+
+            <div class="status-summary-section">
+                <div class="status-section">
+                    <h2>Залишилося</h2>
+                    <div class="status-items" id="remaining-items"></div>
+                </div>
+                <div class="status-section">
+                    <h2>Куплено</h2>
+                    <div class="status-items" id="bought-items"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
