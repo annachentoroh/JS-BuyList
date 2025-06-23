@@ -1,16 +1,89 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
+<html lang="uk">
+<head>
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+    <div class="weather-app">
+        <div class="search-bar">
+            <input type="text" placeholder="Enter city name">
+            <button>Search</button>
+        </div>
+
+        <div class="current-weather">
+            <div class="location-info">
+                <h1>Kyiv</h1>
+                <p>Ukraine</p>
+                <p class="temperature">23°C</p>
+                <p class="description">Clear</p>
+            </div>
+            <div class="weather-icon-current">
+                <img src="images/sun.png" alt="Clear weather icon">
+            </div>
+            <div class="details">
+                <p>Wind: 13 km/h</p>
+                <p>Humidity: 56%</p>
+            </div>
+        </div>
+
+        <div class="forecast-carousel">
+            <div class="forecast-day">
+                <p>Today</p>
+                <div class="weather-icon-small">
+                    <img src="images/sun.png" alt="Clear weather icon">
+                </div>
+                <p class="temp-high">23 °C</p>
+                <p class="temp-low">14 °C</p>
+            </div>
+            <div class="forecast-day">
+                <p>Tue</p>
+                <div class="weather-icon-small">
+                    <img src="images/sun.png" alt="Clear weather icon">
+                </div>
+                <p class="temp-high">23 °C</p>
+                <p class="temp-low">14 °C</p>
+            </div>
+            <div class="forecast-day">
+                <p>Wed</p>
+                <div class="weather-icon-small">
+                    <img src="images/rain.png" alt="Rainy weather icon">
+                </div>
+                <p class="temp-high">20 °C</p>
+                <p class="temp-low">13 °C</p>
+            </div>
+            <div class="forecast-day"> <p>Thu</p>
+                <div class="weather-icon-small">
+                    <img src="images/sun.png" alt="Clear weather icon">
+                </div>
+                <p class="temp-high">22 °C</p>
+                <p class="temp-low">13 °C</p>
+            </div>
+            <div class="forecast-day"> <p>Fri</p>
+                <div class="weather-icon-small">
+                    <img src="images/sun.png" alt="Clear weather icon">
+                </div>
+                <p class="temp-high">24 °C</p>
+                <p class="temp-low">15 °C</p>
+            </div>
+            <div class="forecast-day"> <p>Sat</p>
+                <div class="weather-icon-small">
+                    <img src="images/cloud.png" alt="Cloudy weather icon">
+                </div>
+                <p class="temp-high">21 °C</p>
+                <p class="temp-low">14 °C</p>
+            </div>
+            <div class="forecast-day"> <p>Sun</p>
+                <div class="weather-icon-small">
+                    <img src="images/sun.png" alt="Clear weather icon">
+                </div>
+                <p class="temp-high">23 °C</p>
+                <p class="temp-low">13 °C</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
